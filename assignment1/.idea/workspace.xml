@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94997414-e636-4b15-a838-7bcc163d35a7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assignment1.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/InputOutput/UserInput.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/InputOutput/UserOutput.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/InputOutput/UserOutput.js" />
       <change beforePath="" afterPath="$PROJECT_DIR$/../lesson1/src/Person/Person.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/../lesson1/src/Person/Person.js" />
     </list>
@@ -41,10 +31,8 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+              <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,9 +42,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/InputOutput/UserOutput.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -183,12 +169,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515961545720</updated>
-      <workItem from="1515961547143" duration="2377000" />
+      <workItem from="1515961547143" duration="2488000" />
     </task>
+    <task id="LOCAL-00001" summary="The instructions are:&#10;&#10;Create TWO new components: UserInput and UserOutput&#10;UserInput should hold an input element, UserOutput two paragraphs&#10;Output multiple UserOutput components in the App component (any paragraph texts of your choice)&#10;Pass a username (of your choice) to UserOutput via props and display it there&#10;Add state to the App component (=&gt; the username) and pass the username to the UserOutput component&#10;Add a method to manipulate the state (=&gt; an event-handler method)&#10;Pass the event-handler method reference to the UserInput component and bind it to the input-change event&#10;Ensure that the new input entered by the user overwrites the old username passed to UserOutput&#10;Add two-way-binding to your input (in UserInput) to also display the starting username&#10;Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets">
+      <created>1515964090553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1515964090553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2377000" />
+    <option name="totallyTimeSpent" value="2488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -220,6 +214,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="The instructions are:&#10;&#10;Create TWO new components: UserInput and UserOutput&#10;UserInput should hold an input element, UserOutput two paragraphs&#10;Output multiple UserOutput components in the App component (any paragraph texts of your choice)&#10;Pass a username (of your choice) to UserOutput via props and display it there&#10;Add state to the App component (=&gt; the username) and pass the username to the UserOutput component&#10;Add a method to manipulate the state (=&gt; an event-handler method)&#10;Pass the event-handler method reference to the UserInput component and bind it to the input-change event&#10;Ensure that the new input entered by the user overwrites the old username passed to UserOutput&#10;Add two-way-binding to your input (in UserInput) to also display the starting username&#10;Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets" />
+    <option name="LAST_COMMIT_MESSAGE" value="The instructions are:&#10;&#10;Create TWO new components: UserInput and UserOutput&#10;UserInput should hold an input element, UserOutput two paragraphs&#10;Output multiple UserOutput components in the App component (any paragraph texts of your choice)&#10;Pass a username (of your choice) to UserOutput via props and display it there&#10;Add state to the App component (=&gt; the username) and pass the username to the UserOutput component&#10;Add a method to manipulate the state (=&gt; an event-handler method)&#10;Pass the event-handler method reference to the UserInput component and bind it to the input-change event&#10;Ensure that the new input entered by the user overwrites the old username passed to UserOutput&#10;Add two-way-binding to your input (in UserInput) to also display the starting username&#10;Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -236,10 +238,8 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="51" column="77" lean-forward="false" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -247,16 +247,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InputOutput/UserOutput.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>

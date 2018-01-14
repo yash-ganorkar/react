@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="656afec0-d697-4495-b5c2-218189195401" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/.idea/assignment1.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/src/InputOutput/UserInput.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/src/InputOutput/UserOutput.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assignment1/src/InputOutput/UserOutput.js" />
       <change beforePath="" afterPath="$PROJECT_DIR$/lesson1/src/Person/Person.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/lesson1/src/Person/Person.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/assignment1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/assignment1/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -202,7 +195,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515947769071</updated>
-      <workItem from="1515947770856" duration="7411000" />
+      <workItem from="1515947770856" duration="7532000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted stuff.">
       <created>1515947890042</created>
@@ -215,7 +208,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7411000" />
+    <option name="totallyTimeSpent" value="7532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
