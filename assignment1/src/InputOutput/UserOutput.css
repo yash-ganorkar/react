@@ -1,0 +1,19 @@
+.UserOutput {
+    width: 60%;
+    margin: 16px auto;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 3px #cccccc;
+    padding: 16px;
+    text-align: center;
+}
+
+.UserOutput:hover {
+    width: 60%;
+
+    margin: 16px auto;
+    border: 1px solid blue;
+    box-shadow: 0 2px 3px #cccccc;
+    padding: 16px;
+    text-align: center;
+    cursor: crosshair;
+}
