@@ -15,16 +15,24 @@ class App extends Component {
         displayButton: "Show View"
     };
 
-    switchNameHandler = (newFirstName) => {
-        this.setState({
-            persons:
-                [
-                    {firstName: newFirstName, lastName: 'Ganorkar'},
-                    {firstName: 'Ajay', lastName: 'Wangoo'}
-                ]
-        })
-    };
+    // switchNameHandler = (newFirstName) => {
+    //     this.setState({
+    //         persons:
+    //             [
+    //                 {firstName: newFirstName, lastName: 'Ganorkar'},
+    //                 {firstName: 'Ajay', lastName: 'Wangoo'}
+    //             ]
+    //     })
+    // };
 
+    deletePersonHandler = (personIndex) => {
+
+        const persons = this.state.persons;
+
+        persons.splice(personIndex, 1);
+
+        this.setState({persons: persons})
+    };
     nameChangedHandler = (event) => {
         this.setState({
             persons:
@@ -58,6 +66,36 @@ class App extends Component {
 
     render() {
 
+        let persons = null;
+
+        if (this.state.showPersons) {
+            persons = (
+                <div>
+                    {this.state.persons.map((person, index) => {
+                        return <Person key={person.firstName + person.lastName}
+                                       click={this.deletePersonHandler.bind(this, index)}
+                                       firstName={person.firstName}
+                                       lastName={person.lastName}/>
+                    })}
+                    {/*
+                    <Person
+                        nameChanged={this.nameChanged}
+                        nameChangedHandler={this.nameChangedHandler}
+                        click={this.switchNameHandler.bind(this, 'Shruti')}
+                        firstName={this.state.persons[0].firstName}
+                        lastName={this.state.persons[0].lastName}/>
+                    <Person
+
+                        firstName={this.state.persons[1].firstName}
+                        lastName={this.state.persons[1].lastName}>
+                        I live in Hyderabad!!
+                    </Person>
+*/}
+                </div>
+
+            );
+        }
+
         const style = {
             backgroundColor: 'white',
             font: 'inherit',
@@ -74,36 +112,21 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                     <div>
-                        <button style={style} onClick={this.switchNameHandler.bind(this, 'Aishwarya')}>Passing Value to
-                            function using .bind()
-                        </button>
-                        <button style={style} onClick={() => this.switchNameHandler('Hahaha')}>Passing Value to function
-                            using Arrow()
-                        </button>
+                        {/*<button style={style} onClick={this.switchNameHandler.bind(this, 'Aishwarya')}>Passing Value to*/}
+                        {/*function using .bind()*/}
+                        {/*</button>*/}
+                        {/*<button style={style} onClick={() => this.switchNameHandler('Hahaha')}>Passing Value to function*/}
+                        {/*using Arrow()*/}
+                        {/*</button>*/}
                         <button style={style} onClick={this.togglePersonHandler}>
                             {this.state.displayButton}
                         </button>
 
+                        {persons}
+
                     </div>
-                    {
-                        this.state.showPersons === true ?
-                            <div>
-                                <Person
-                                    nameChanged={this.nameChanged}
-                                    nameChangedHandler={this.nameChangedHandler}
-                                    click={this.switchNameHandler.bind(this, 'Shruti')}
-                                    firstName={this.state.persons[0].firstName}
-                                    lastName={this.state.persons[0].lastName}/>
-                                <Person
 
-                                    firstName={this.state.persons[1].firstName}
-                                    lastName={this.state.persons[1].lastName}>
-                                    I live in Hyderabad!!
-                                </Person>
 
-                            </div>
-                            : null
-                    }
                 </p>
             </div>
         );
