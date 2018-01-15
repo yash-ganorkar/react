@@ -8,8 +8,8 @@ class App extends Component {
 
     state = {
         persons: [
-            {firstName: 'Yash', lastName: 'Ganorkar'},
-            {firstName: 'Aseem', lastName: 'Wangoo'}
+            {id: 'gjfjg', firstName: 'Yash', lastName: 'Ganorkar'},
+            {id: 'uiyui', firstName: 'Aseem', lastName: 'Wangoo'}
         ],
         showPersons: false,
         displayButton: "Show View"
@@ -27,19 +27,37 @@ class App extends Component {
 
     deletePersonHandler = (personIndex) => {
 
-        const persons = this.state.persons;
+        //const persons = this.state.persons.slice();
+        const persons = [...this.state.persons];
 
         persons.splice(personIndex, 1);
 
         this.setState({persons: persons})
     };
-    nameChangedHandler = (event) => {
+    nameChangedHandler = (event, index) => {
+
+        //get index of the updated element
+        const personIndex = this.state.persons.findIndex(p => {
+            return p.id === index;
+        });
+
+        //get the required element from the state to avoid mutating state
+        const person = {
+            ...this.state.persons[personIndex]
+        };
+
+        //update the required field of the particular element in the array
+        person.firstName = event.target.value;
+
+        //create copy of original array
+        const persons = [...this.state.persons];
+
+        //assign the updated element to the newly created copy of an array
+        persons[personIndex] = person;
+
+        //set the state with the newly created copy
         this.setState({
-            persons:
-                [
-                    {firstName: event.target.value, lastName: 'Ganorkar'},
-                    {firstName: 'Ajay', lastName: 'Wangoo'}
-                ]
+            persons: persons
         })
     };
 
@@ -72,10 +90,11 @@ class App extends Component {
             persons = (
                 <div>
                     {this.state.persons.map((person, index) => {
-                        return <Person key={person.firstName + person.lastName}
+                        return <Person key={person.id}
                                        click={this.deletePersonHandler.bind(this, index)}
                                        firstName={person.firstName}
-                                       lastName={person.lastName}/>
+                                       lastName={person.lastName}
+                                       nameChangedHandler={(event) => this.nameChangedHandler(event, person.id)}/>
                     })}
                     {/*
                     <Person
