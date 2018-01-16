@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../Assets/logo.svg';
 
-
+//stateless components
 const Cockpit = (props) => {
 
     const paragraphClasses = [];
