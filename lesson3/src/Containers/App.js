@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 
 import './App.css';
 
-import Person from './Person/Person';
-
+import Persons from '../Components/Persons/Persons'
+import Cockpit from '../Components/Cockpit/Cockpit'
 
 class App extends Component {
 
@@ -66,66 +65,34 @@ class App extends Component {
 
     render() {
 
-        const style = {
-            backgroundColor: 'green',
-            font: 'inherit',
-            border: '1px solid blue',
-            cursor: 'pointer',
-            padding: '8px',
-            color: 'white'
-        };
 
         let persons = null;
 
         if (this.state.showPersons) {
             persons = (
                 <div>
-                    {this.state.persons.map((person, index) => {
-                        return <Person key={person.id}
-                                       click={this.deletePersonHandler.bind(this, index)}
-                                       firstName={person.firstName}
-                                       lastName={person.lastName}
-                                       nameChangedHandler={(event) => this.nameChangedHandler(event, person.id)}/>
-                    })}
-
+                    <Persons
+                        persons={this.state.persons}
+                        deletePersonHandler={this.deletePersonHandler}
+                        nameChangedHandler={this.nameChangedHandler}/>
                 </div>
 
 
             );
-            style.backgroundColor = "red";
+
         }
 
-        const paragraphClasses = [];
-
-        if (this.state.persons.length <= 2) {
-            paragraphClasses.push('red')
-        }
-        if (this.state.persons.length <= 1) {
-            paragraphClasses.push('bold')
-        }
-
-        const newParagraphClasses = paragraphClasses.join(' ');
 
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-
-                <p className={newParagraphClasses}>Some Paragraph</p>
-                    <div>
-                        <button style={style}
-                                onClick={this.togglePersonHandler}>
-                            {this.state.displayButton}
-                        </button>
-
+                <Cockpit persons={this.state.persons}
+                         showPersons={this.state.showPersons}
+                         buttonText={this.state.displayButton}
+                         togglePersonHandler={this.togglePersonHandler}/>
                         {persons}
-
-                    </div>
-
-
             </div>
+
+
         );
     }
 }
