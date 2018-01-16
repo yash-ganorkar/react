@@ -5,7 +5,7 @@ class Persons extends Component {
 
     constructor(props) {
         super(props);
-        
+
     }
 
     render() {
