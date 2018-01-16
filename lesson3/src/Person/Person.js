@@ -1,17 +1,11 @@
 import React from 'react';
-import Radium from 'radium';
 import './Person.css'
 
 const person = (props) => {
 
-    const styles = {
-        ':hover': {
-            color: 'red',
-            fontWeight: 'bold'
-        }
-    };
+
     return (
-        <div className="Person" style={styles}>
+        <div className="Person">
             <p onClick={props.click}> I am {props.firstName} {props.lastName}</p>
             <p>{props.children}</p>
             <input type="text" value={props.firstName} onChange={props.nameChangedHandler}/>
@@ -20,4 +14,4 @@ const person = (props) => {
     )
 };
 
-export default Radium(person);
+export default person;

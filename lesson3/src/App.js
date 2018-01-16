@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-import Radium from 'radium';
 
 import './App.css';
 
@@ -73,13 +72,7 @@ class App extends Component {
             border: '1px solid blue',
             cursor: 'pointer',
             padding: '8px',
-            color: 'white',
-
-            ':hover': {
-                backgroundColor: 'lightgreen',
-                color: 'black',
-                fontWeight: 'bold'
-            }
+            color: 'white'
         };
 
         let persons = null;
@@ -100,12 +93,6 @@ class App extends Component {
 
             );
             style.backgroundColor = "red";
-
-            style[':hover'] = {
-                backgroundColor: 'salmon',
-                color: 'black',
-                fontWeight: 'bold'
-            }
         }
 
         const paragraphClasses = [];
@@ -143,4 +130,4 @@ class App extends Component {
     }
 }
 
-export default Radium(App);
+export default App;
