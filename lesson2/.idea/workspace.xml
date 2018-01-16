@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7066f1a1-ca78-4255-a1aa-ce639f39a969" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../assignment2/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../assignment2/src/component/CharComponent.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../assignment2/src/component/CharComponent.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../assignment2/src/component/ValidationComponent.js" />
-      <change beforePath="$PROJECT_DIR$/../assignment1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../assignment1/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
