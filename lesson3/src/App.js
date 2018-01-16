@@ -15,16 +15,6 @@ class App extends Component {
         displayButton: "Show View"
     };
 
-    // switchNameHandler = (newFirstName) => {
-    //     this.setState({
-    //         persons:
-    //             [
-    //                 {firstName: newFirstName, lastName: 'Ganorkar'},
-    //                 {firstName: 'Ajay', lastName: 'Wangoo'}
-    //             ]
-    //     })
-    // };
-
     deletePersonHandler = (personIndex) => {
 
         //const persons = this.state.persons.slice();
@@ -61,16 +51,6 @@ class App extends Component {
         })
     };
 
-    nameChanged = () => {
-        this.setState({
-            persons:
-                [
-                    {firstName: "Gayatri", lastName: 'Ganorkar'},
-                    {firstName: 'Ajay', lastName: 'Wangoo'}
-                ]
-        })
-    };
-
     togglePersonHandler = () => {
         const doesShow = this.state.showPersons;
         this.setState({showPersons: !doesShow});
@@ -84,6 +64,16 @@ class App extends Component {
 
     render() {
 
+        const style = {
+            backgroundColor: 'green',
+            font: 'inherit',
+            border: '1px solid blue',
+            cursor: 'pointer',
+            padding: '8px',
+            color: 'white'
+
+        };
+
         let persons = null;
 
         if (this.state.showPersons) {
@@ -96,48 +86,36 @@ class App extends Component {
                                        lastName={person.lastName}
                                        nameChangedHandler={(event) => this.nameChangedHandler(event, person.id)}/>
                     })}
-                    {/*
-                    <Person
-                        nameChanged={this.nameChanged}
-                        nameChangedHandler={this.nameChangedHandler}
-                        click={this.switchNameHandler.bind(this, 'Shruti')}
-                        firstName={this.state.persons[0].firstName}
-                        lastName={this.state.persons[0].lastName}/>
-                    <Person
 
-                        firstName={this.state.persons[1].firstName}
-                        lastName={this.state.persons[1].lastName}>
-                        I live in Hyderabad!!
-                    </Person>
-*/}
                 </div>
 
+
             );
+            style.backgroundColor = "red"
         }
 
-        const style = {
-            backgroundColor: 'white',
-            font: 'inherit',
-            border: '1px solid blue',
-            cursor: 'pointer',
-            padding: '8px'
-        };
+        const paragraphClasses = [];
+
+        if (this.state.persons.length <= 2) {
+            paragraphClasses.push('red')
+        }
+        if (this.state.persons.length <= 1) {
+            paragraphClasses.push('bold')
+        }
+
+        const newParagraphClasses = paragraphClasses.join(' ');
+
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
+
+                <p className={newParagraphClasses}>Some Paragraph</p>
                     <div>
-                        {/*<button style={style} onClick={this.switchNameHandler.bind(this, 'Aishwarya')}>Passing Value to*/}
-                        {/*function using .bind()*/}
-                        {/*</button>*/}
-                        {/*<button style={style} onClick={() => this.switchNameHandler('Hahaha')}>Passing Value to function*/}
-                        {/*using Arrow()*/}
-                        {/*</button>*/}
-                        <button style={style} onClick={this.togglePersonHandler}>
+                        <button style={style}
+                                onClick={this.togglePersonHandler}>
                             {this.state.displayButton}
                         </button>
 
@@ -146,7 +124,6 @@ class App extends Component {
                     </div>
 
 
-                </p>
             </div>
         );
     }
